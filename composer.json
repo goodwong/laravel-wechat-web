@@ -1,0 +1,14 @@
+{
+    "name": "goodwong/laravel-wechat-web",
+    "description": "微信网站扫码登录",
+    "type": "metapackage",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "william",
+            "email": "goodwong@foxmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
