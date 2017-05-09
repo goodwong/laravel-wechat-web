@@ -1,7 +1,7 @@
 {
     "name": "goodwong/laravel-wechat-web",
     "description": "微信网站扫码登录",
-    "type": "metapackage",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
