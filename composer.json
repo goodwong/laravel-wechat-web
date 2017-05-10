@@ -10,7 +10,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {},
+    "require": {
+        "overtrue/wechat": "~3.1"
+    },
     "autoload": {
         "psr-4": {
             "Goodwong\\LaravelWechatWeb\\": "src/"
