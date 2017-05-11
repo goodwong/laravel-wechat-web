@@ -49,9 +49,8 @@ class OAuthAuthenticate
         if ($request->user()) {
             return $next($request);
         }
-
-        // 微信里面，跳过
-        if ($this->isWeChatBrowser($request)) {
+        // 移动端，跳过
+        if ($this->isMobile($request)) {
             return $next($request);
         }
 
@@ -105,8 +104,8 @@ class OAuthAuthenticate
      * @param \Illuminate\Http\Request $request
      * @return bool
      */
-    protected function isWeChatBrowser($request)
+    protected function isMobile($request)
     {
-        return strpos($request->header('user_agent'), 'MicroMessenger') !== false;
+        return stripos($request->header('user_agent'), 'Mobile') !== false;
     }
 }

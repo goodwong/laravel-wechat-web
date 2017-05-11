@@ -6,6 +6,15 @@
 > **注意：** 依赖`overtrue/wechat`作服务层
 
 
+## 特别注意：
+> 因为微信扫码对浏览器没有判断能力（像钉钉扫码可以限制在UserAgent含有Dingtalk时显示），
+建议在设置`middleware`时顺序放最后面，
+比如放在`goodowng/laravel-dingtalk-oauth`后面，
+因为dingtalk可以根据UserAgent判断是否符合钉钉扫码条件，
+不符合钉钉再显示微信二维码，不容易冲突或者拦截掉本该显示钉钉二维码的场景。
+
+
+
 ## 原理
 
 1. 当用户满足以下条件时，解析微信信息：
@@ -83,7 +92,7 @@
     // user auth
     Route::group([
         'middleware' => [
-            \Goodwong\LaravelWechatWeb\Middleware\OAuthAuthenticate::class
+            \Goodwong\LaravelWechatWeb\Middleware\OAuthAuthenticate::class,
         ],
     ], function () {
         // ...
