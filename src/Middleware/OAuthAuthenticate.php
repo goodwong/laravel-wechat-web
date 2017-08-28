@@ -5,7 +5,7 @@ namespace Goodwong\LaravelWechatWeb\Middleware;
 use Log;
 use Closure;
 use Illuminate\Http\Request;
-use Goodwong\LaravelWechatWeb\Handlers\CreateWebUserHandler;
+use Goodwong\LaravelWechatWeb\Handlers\WebUserHandler;
 use Goodwong\LaravelWechatWeb\Events\WebUserAuthorized;
 use Goodwong\LaravelWechatWeb\Repositories\WebUserRepository;
 use EasyWeChat\Foundation\Application as EasyWechatApplication;
@@ -15,13 +15,13 @@ class OAuthAuthenticate
     /**
      * construct
      * 
-     * @param  CreateWebUserHandler  $createWebUserHandler
+     * @param  WebUserHandler  $webUserHandler
      * @param  WebUserRepository  $webUserRepository
      * @return void
      */
-    public function __construct(CreateWebUserHandler $createWebUserHandler, WebUserRepository $webUserRepository)
+    public function __construct(WebUserHandler $webUserHandler, WebUserRepository $webUserRepository)
     {
-        $this->createWebUserHandler = $createWebUserHandler;
+        $this->webUserHandler = $webUserHandler;
         $this->webUserRepository = $webUserRepository;
 
         $config = [
@@ -73,7 +73,7 @@ class OAuthAuthenticate
 
         $webUser = $this->webUserRepository->findBy('openid', $info['openid']);
         if (!$webUser) {
-            $webUser = $this->createWebUserHandler->create($info);
+            $webUser = $this->webUserHandler->create($info);
         }
 
         event(new WebUserAuthorized($webUser));
