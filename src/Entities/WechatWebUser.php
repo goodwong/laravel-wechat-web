@@ -15,7 +15,16 @@ class WechatWebUser extends Model
      * @var array
      */
     protected $fillable = [
-        'openid', 'nickname', 'sex', 'province', 'city', 'country', 'headimgurl', 'privilege', 'unionid', 
+        'user_id',
+        'openid',
+        'nickname',
+        'sex',
+        'province',
+        'city',
+        'country',
+        'headimgurl',
+        'privilege',
+        'unionid',
     ];
 
     /**
