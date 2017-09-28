@@ -17,5 +17,12 @@
         "psr-4": {
             "Goodwong\\LaravelWechatWeb\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Goodwong\\LaravelWechatWeb\\WechatWebServiceProvider"
+            ]
+        }
     }
 }
