@@ -1,6 +1,6 @@
 <?php
 
-namespace Goodwong\LaravelWechatWeb;
+namespace Goodwong\WechatWeb;
 
 use Illuminate\Support\ServiceProvider;
 

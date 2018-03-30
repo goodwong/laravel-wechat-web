@@ -1,8 +1,8 @@
 <?php
 
-namespace Goodwong\LaravelWechatWeb\Repositories;
+namespace Goodwong\WechatWeb\Repositories;
 
-use Goodwong\LaravelWechatWeb\Entities\WechatWebUser;
+use Goodwong\WechatWeb\Entities\WechatWebUser;
 
 class WebUserRepository
 {

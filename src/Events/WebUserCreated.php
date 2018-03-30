@@ -1,8 +1,8 @@
 <?php
 
-namespace Goodwong\LaravelWechatWeb\Events;
+namespace Goodwong\WechatWeb\Events;
 
-use Goodwong\LaravelWechatWeb\Entities\WechatWebUser;
+use Goodwong\WechatWeb\Entities\WechatWebUser;
 use Illuminate\Queue\SerializesModels;
 
 class WebUserCreated

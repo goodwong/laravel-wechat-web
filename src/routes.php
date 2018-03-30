@@ -1,7 +1,7 @@
 <?php
 
 Route::group([
-    'namespace' => 'Goodwong\LaravelWechatWeb\Http\Controllers',
+    'namespace' => 'Goodwong\WechatWeb\Http\Controllers',
 ], function () {
     Route::resource('wechat-web-users', 'WebUserController');
 });

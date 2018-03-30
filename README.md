@@ -49,7 +49,7 @@
 2. 打开config/app.php，在providers数组里注册服务：
     ```php
     // Application Service Providers...
-    Goodwong\LaravelWechatWeb\WechatWebServiceProvider::class,
+    Goodwong\WechatWeb\WechatWebServiceProvider::class,
     ```
 
 3. 创建数据库表
@@ -83,7 +83,7 @@
 
         // ...
 
-        'wechat_web_oauth' => \Goodwong\LaravelWechatWeb\Middleware\OAuthAuthenticate::class,
+        'wechat_web_oauth' => \Goodwong\WechatWeb\Middleware\OAuthAuthenticate::class,
     ];
     ```
 
@@ -92,7 +92,7 @@
     // user auth
     Route::group([
         'middleware' => [
-            \Goodwong\LaravelWechatWeb\Middleware\OAuthAuthenticate::class,
+            \Goodwong\WechatWeb\Middleware\OAuthAuthenticate::class,
         ],
     ], function () {
         // ...

@@ -1,9 +1,9 @@
 <?php
 
-namespace Goodwong\LaravelWechatWeb\Handlers;
+namespace Goodwong\WechatWeb\Handlers;
 
-use Goodwong\LaravelWechatWeb\Events\WebUserCreated;
-use Goodwong\LaravelWechatWeb\Repositories\WebUserRepository;
+use Goodwong\WechatWeb\Events\WebUserCreated;
+use Goodwong\WechatWeb\Repositories\WebUserRepository;
 
 class WebUserHandler
 {

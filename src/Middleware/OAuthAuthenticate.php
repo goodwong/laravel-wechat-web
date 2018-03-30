@@ -1,13 +1,13 @@
 <?php
 
-namespace Goodwong\LaravelWechatWeb\Middleware;
+namespace Goodwong\WechatWeb\Middleware;
 
 use Log;
 use Closure;
 use Illuminate\Http\Request;
-use Goodwong\LaravelWechatWeb\Handlers\WebUserHandler;
-use Goodwong\LaravelWechatWeb\Events\WebUserAuthorized;
-use Goodwong\LaravelWechatWeb\Repositories\WebUserRepository;
+use Goodwong\WechatWeb\Handlers\WebUserHandler;
+use Goodwong\WechatWeb\Events\WebUserAuthorized;
+use Goodwong\WechatWeb\Repositories\WebUserRepository;
 use EasyWeChat\Foundation\Application as EasyWechatApplication;
 
 class OAuthAuthenticate
